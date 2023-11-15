@@ -97,7 +97,7 @@ namespace AutoRetainer.Modules.Voyage
             if (plan == null) return "No or unknown plan selected";
             if(plan.Name.Length > 0) return plan.Name;
             if (plan.Points.Count == 0) return $"Plan {plan.GUID}";
-            return $"{plan.GetMap()?.Name}: {plan.Points.Select(x => Svc.Data.GetExcelSheet<SubmarineExplorationPretty>(Dalamud.ClientLanguage.Japanese).GetRow(x).Location.ToString()).Join("→")}";
+            return $"{plan.GetMap()?.Name}: {plan.Points.Select(x => Svc.Data.GetExcelSheet<SubmarineExplorationPretty>(Dalamud.ClientLanguage.Korean).GetRow(x).Location.ToString()).Join("→")}";
         }
 
         internal static uint GetMapId(this SubmarinePointPlan plan) => GetMap(plan)?.RowId ?? 0;

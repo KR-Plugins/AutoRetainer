@@ -424,7 +424,7 @@ namespace AutoRetainer.UI
                 {
                     if(x != 0)
                     {
-                        var d = Svc.Data.GetExcelSheet<SubmarineExplorationPretty>(Dalamud.ClientLanguage.Japanese).GetRow(x);
+                        var d = Svc.Data.GetExcelSheet<SubmarineExplorationPretty>(Dalamud.ClientLanguage.Korean).GetRow(x);
                         if(d != null && d.Location.ToString().Length > 0)
                         {
                             points.Add(d.Location.ToString());
